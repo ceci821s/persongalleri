@@ -13,16 +13,12 @@ async function hentData() {
   vis(json);
 }
 
-function vis(json) {
-  console.log(json);
-}
-
 const section = document.querySelector("section");
 const template = document.querySelector("template").content;
 
-function vis(json) {
-  console.log(json);
-  json.forEach((medlem) => {
+function vis(personliste) {
+  console.log(personliste);
+  personliste.forEach((medlem) => {
     const klon = template.cloneNode(true);
     klon.querySelector(
       "h2"
@@ -33,4 +29,5 @@ function vis(json) {
     section.appendChild(klon);
   });
 }
+
 hentData();
