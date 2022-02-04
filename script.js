@@ -17,9 +17,7 @@ function vis(json) {
   console.log(json);
 }
 
-hentData();
-
-const main = document.querySelector("main");
+const section = document.querySelector("section");
 const template = document.querySelector("template").content;
 
 function vis(json) {
@@ -31,7 +29,8 @@ function vis(json) {
     ).textContent = `${medlem.fornavn} ${medlem.efternavn}`;
     klon.querySelector(".email").textContent = medlem.email;
     // klon.querySelector(".info").textContent = person.info;
-    klon.querySelector("img").src = "faces/" + medlem.profilbillede;
-    main.appendChild(klon);
+    klon.querySelector("img").src = "/faces/" + medlem.profilbillede;
+    section.appendChild(klon);
   });
 }
+hentData();
