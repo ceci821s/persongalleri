@@ -24,12 +24,14 @@ const template = document.querySelector("template").content;
 
 function vis(json) {
   console.log(json);
-  json.forEach((person) => {
+  json.forEach((medlem) => {
     const klon = template.cloneNode(true);
-    klon.querySelector(".navn").textContent = person.navn;
-    klon.querySelector(".email").textContent = person.email;
-    klon.querySelector(".info").textContent = person.info;
-    // klon.querySelector(".billede").src = mediurl + person.billede;
+    klon.querySelector(
+      "h2"
+    ).textContent = `${medlem.fornavn} ${medlem.efternavn}`;
+    klon.querySelector(".email").textContent = medlem.email;
+    // klon.querySelector(".info").textContent = person.info;
+    klon.querySelector("img").src = "faces/" + medlem.profilbillede;
     main.appendChild(klon);
   });
 }
