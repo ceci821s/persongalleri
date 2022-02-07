@@ -23,3 +23,13 @@ article {
   border: solid orange 2px;
   margin: 10px;
 }
+
+nav {
+  display: flex;
+  justify-content: left;
+  gap: 50px;
+  padding: 20px;
+}
+.valgt {
+  background-color: blueviolet;
+}
