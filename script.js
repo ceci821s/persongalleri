@@ -18,7 +18,6 @@ function start() {
 
 async function hentData() {
   const resspons = await fetch(url, options);
-  //   console.log(resspons);
 
   const json = await resspons.json();
   vis(json);
